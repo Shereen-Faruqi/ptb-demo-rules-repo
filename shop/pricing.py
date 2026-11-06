@@ -9,3 +9,10 @@ def apply_discount(price, percent):
 def describe_discount(percent):
     """Return a short text such as '10% off'."""
     return f"{percent}% off"
+
+
+def bulk_price(price, quantity):
+    print("DEBUG bulk_price", price, quantity)
+    if quantity >= 10:
+        return round(price * quantity * 0.9, 2)
+    return round(price * quantity, 2)
